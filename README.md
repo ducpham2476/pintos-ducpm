@@ -50,8 +50,8 @@ Defined functions:
 **_./src/threads/synch.c:_**
 Additional changes to pre-existing functions to disable **thread_mlfqs** (Multilevel Feedback Queue) scheduling, prevent thread's priority donating interfere with mlfqs
 >Advanced Scheduler FAQ:
-How does priority donation interact with the advanced scheduler?
-It doesn't have to. We won't test priority donation and the advanced scheduler at the same time.
+- How does priority donation interact with the advanced scheduler?
+- It doesn't have to. We won't test priority donation and the advanced scheduler at the same time.
 
 Modifications: Line 236, 243 & 292. 
-- Line 224: 
+Line 224: 
