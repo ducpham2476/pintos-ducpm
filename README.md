@@ -11,10 +11,10 @@ My additional modifications to the files only focus on the **3rd problem, implem
 
 These following files have been modified within the scope of this Project:
 
-	- *./src/threads/thread.c*
-	- *./src/threads/thread.h*
-	- *./src/threads/synch.c*
-	- Added 1 additional file: *./src/threads/fixed_point.h*
+	- ./src/threads/thread.c
+	- ./src/threads/thread.h
+	- ./src/threads/synch.c
+	- Added 1 additional file: ./src/threads/fixed_point.h
 
 In order for this Project to run properly, these below files have been modified to meet the Project's requirements.
 The details on why the changes are added got explained precisely using comments within corresponding files.
@@ -72,12 +72,13 @@ This file was modified for the implementation of needed functions for **thread_m
 	1. Add line 16, include the *fixed_point.h* file for value manipulation
 	2. Add line 68, declare the fixed_t load_avg variable, holding the CPU average load at one time.
 	3. Add line 124, initiate the load_avg value at thread start
-	4. Modify line 476 to 479, if running mlfqs, return control to main program to update priority first
-	5. Modify line 511 to 515, set the nice value to current thread & update priority
-	6. Modify line 524: return nice value
-	7. Modify line 533: return load_avg value
-	8. Modify line 542: return recent_cpu value
-	9. Added line 546 to 630, implement some needed functions:
+	4. Add line 449 to 455, test current thread to see it could be preempted by the top thread in ready list or not
+	5. Modify line 476 to 479, if running mlfqs, return control to main program to update priority first
+	6. Modify line 511 to 515, set the nice value to current thread & update priority
+	7. Modify line 524: return nice value
+	8. Modify line 533: return load_avg value
+	9. Modify line 542: return recent_cpu value
+	10. Added line 546 to 630, implement some needed functions:
 		- thread_mlfqs_incr_recent_cpu (void): Check current thread is idle or not. If not, increase current thread's recent_cpu by 1
 		- thread_mlfqs_calc_recent_cpu (struct thread *t): Calculate thread's recent CPU. Formula is defined in B.3 Calculating recent_cpu
 		- thread_mlfqs_update_priority (struct thread *t): Check if thread is idle or not. If not, update thread's priority. Formula is defined in B.2 Calculating priority
