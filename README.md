@@ -52,5 +52,16 @@ Additional changes to pre-existing functions to disable **thread_mlfqs** (Multil
 
 Modifications: Line 236, 243 & 292. 
 
-**_./src/threads/synch.h:_**
+**_./src/threads/threads.h:_**
+This header file was modified to add new variable/function declarations needed for **thread_mlfqs** to work properly. The functions are implemented in *thread.c* file.
+The changes are listed below:
 
+*Variables: Edits in thread's structure, Adding line 116, 117*
+- int nice
+- fixed_t recent_cpu
+
+*Functions: Definition of function prototypes*
+- void thread_mlfqs_incr_recent_cpu (void)
+- void thread_mlfqs_calc_recent_cpu (void)
+- void thread_mlfqs_update_priority (struct thread *)
+- void thread_mlfqs_update_refresh (void)
