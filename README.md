@@ -54,11 +54,11 @@ This header file was modified to add new variable/function declarations needed f
 
 	Modifications:
 
-	*Variables: Edits in thread's structure, adding line 116, 117*
+	Variables: Edits in thread's structure, adding line 116, 117
 	1. int nice
 	2. fixed_t recent_cpu
 
-	*Functions: Definition of function prototypes, adding line 182 to 185*
+	Functions: Definition of function prototypes, adding line 182 to 185
 	1. void thread_mlfqs_incr_recent_cpu (void)
 	2. void thread_mlfqs_calc_recent_cpu (void)
 	3. void thread_mlfqs_update_priority (struct thread *)
