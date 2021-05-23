@@ -62,7 +62,7 @@ This header file was modified to add new variable/function declarations needed f
 	1. void thread_mlfqs_incr_recent_cpu (void)
 	2. void thread_mlfqs_calc_recent_cpu (void)
 	3. void thread_mlfqs_update_priority (struct thread *)
-	4. void thread_mlfqs_update_refresh (void)
+	4. void thread_mlfqs_refresh (void)
 
 **_./src/threads/thread.c:_**
 This file was modified for the implementation of needed functions for **thread_mlfqs** to work properly.
