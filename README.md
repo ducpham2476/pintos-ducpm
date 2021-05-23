@@ -12,7 +12,6 @@ These following files have been modified within the scope of this Project:
 *./src/threads/thread.c*
 *./src/threads/thread.h*
 *./src/threads/synch.c*
-*./src/threads/synch.h*
 Added 1 additional file: *./src/threads/fixed_point.h*
 
 In order for this Project to run properly, these below files have been modified to meet the Project's requirements.
