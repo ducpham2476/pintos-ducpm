@@ -49,17 +49,32 @@ Additional changes to pre-existing functions to disable **thread_mlfqs** (Multil
 
 Modifications: Line 236, 243 & 292. 
 
-**_./src/threads/threads.h:_**
+**_./src/threads/thread.h:_**
 This header file was modified to add new variable/function declarations needed for **thread_mlfqs** to work properly. The functions are implemented in *thread.c* file.
 
 Modifications:
 
 *Variables: Edits in thread's structure, adding line 116, 117*
-- int nice
-- fixed_t recent_cpu
+1. int nice
+2. fixed_t recent_cpu
 
 *Functions: Definition of function prototypes, adding line 182 to 185*
-- void thread_mlfqs_incr_recent_cpu (void)
-- void thread_mlfqs_calc_recent_cpu (void)
-- void thread_mlfqs_update_priority (struct thread *)
-- void thread_mlfqs_update_refresh (void)
+1. void thread_mlfqs_incr_recent_cpu (void)
+2. void thread_mlfqs_calc_recent_cpu (void)
+3. void thread_mlfqs_update_priority (struct thread *)
+4. void thread_mlfqs_update_refresh (void)
+
+**_./src/threads/thread.c:_**
+This file was modified for the implementation of needed functions for **thread_mlfqs** to work properly.
+
+Modifications:
+1. Add line 16, include the *fixed_point.h* file for value manipulation
+2. Add line 68, declare the fixed_t load_avg variable, holding the CPU average load at one time.
+3. Add line 124, initiate the load_avg value at thread start
+4. Modify line 476 to 479, if running mlfqs, return control to main program to update priority first
+5. Modify line 511 to 515, set the nice value to current thread & update priority
+6. Modify line 524: return nice value
+7. Modify line 533: return load_avg value
+8. Modify line 542: return recent_cpu value
+9. Added line 546 to 630, implement some needed functions:
+- 
