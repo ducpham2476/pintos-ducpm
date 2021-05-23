@@ -1,9 +1,10 @@
 **PintOS: Project 1 - Threads**
 
 **Problems: Provided in cs140, Project 1**
-1. Alarm clock
-2. Priority scheduling
-3. Advanced scheduler
+
+	1. Alarm clock
+	2. Priority scheduling
+	3. Advanced scheduler
 My additional modifications to the files only focus on the **3rd problem, implementing the Advanced scheduler,** as listed in cs140 course.
 
 **Changelog:**
