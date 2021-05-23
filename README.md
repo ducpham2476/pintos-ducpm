@@ -18,6 +18,7 @@ Added 1 additional file: *./src/threads/fixed_point.h*
 In order for this Project to run properly, these below files have been modified to meet the Project's requirements.
 The details on why the changes are added got explained precisely using comments within corresponding files.
 Each changes are enclosed within the structure:
+
 //Edit
 	*changes*
 //End of edit
