@@ -19,7 +19,7 @@ In order for this Project to run properly, these below files have been modified 
 The details on why the changes are added got explained precisely using comments within corresponding files.
 Each changes are enclosed within the structure:
 
-	//Edit
+	//Edit: Advanced scheduler
 		*Additional changes*
 	//End of edit
 
