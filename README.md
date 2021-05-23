@@ -1,14 +1,14 @@
-#PintOS: Project 1 - Threads#
+**PintOS: Project 1 - Threads**
 
-#Problems: Provided in cs140, Project 1#
+**Problems: Provided in cs140, Project 1**
 1. Alarm clock
 2. Priority scheduling
 3. Advanced scheduler
+My additional modifications to the files only focus on the **3rd problem, implementing the Advanced scheduler,** as listed in cs140 course.
 
-#Changelog:#
+**Changelog:**
 
 These following files have been modified within the scope of this Project:
-*./src/devices/timer.c*
 *./src/threads/thread.c*
 *./src/threads/thread.h*
 *./src/threads/synch.c*
@@ -25,16 +25,9 @@ Each changes are enclosed within the structure:
 	
 //End of edit
 
-#Details:#
+**Details:**
 
-#*./src/devices/timer.c:*#
-1. Added line 6, line 48: Adding list structure definitions (6), then initiate a list of sleeping threads upon timer initiation.
-2. Modified line 105 to 127: Modifying timer_sleep() function. This function indicates how many ticks the thread should be sleeping.
-3. Added line 210 to 247: Implementing Multi-level Feedback Queue (mlfqs) & Priority Scheduling - Preempt (preempt) functions.
-- mlfqs: line 218 to 225: If running mlfqs, update the recent_cpu and load_avg values, then update the current thread's priority.
-- preempt: line 233 to 249: Checking & waking up sleeping threads. If it's time to wake up a thread(s), remove them from sleeping list and set preempt to ready.
-
-#*./src/threads/fixed_point.h:*#
+*./src/threads/fixed_point.h:*
 This header file was added to define some functions on converting floating-point real number to fixed-point real number, and calculations on those numbers.
 #From B.6 Fixed-Point Real Arithmetic:#
 *In the formulas, priority, nice and ready_threads are integers, but recent_cpu and load_avg are real numbers. Unfortunately, PintOS does not support floating-point arithmetic in the kernel, because it would complicate and slow the kernel... This means that calculations on real quantities must be simulated using integers* 
