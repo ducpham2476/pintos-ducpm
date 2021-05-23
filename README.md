@@ -48,7 +48,7 @@ This header file was added to define some functions on converting floating-point
 Additional changes to pre-existing functions to disable **thread_mlfqs** (Multilevel Feedback Queue) scheduling, prevent thread's priority donating interfere with mlfqs
 >**Advanced Scheduler FAQ:** _How does priority donation interact with the advanced scheduler?_ It doesn't have to. We won't test priority donation and the advanced scheduler at the same time.
 
-	Modifications: Line 236, 243 & 292. 
+	Modifications: Line 224, 243 & 292. 
 
 **_./src/threads/thread.h:_**
 This header file was modified to add new variable/function declarations needed for **thread_mlfqs** to work properly. The functions are implemented in *thread.c* file.
