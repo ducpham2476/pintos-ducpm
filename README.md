@@ -30,10 +30,7 @@ This header file was added to define some functions on converting floating-point
 **From B.6 Fixed-Point Real Arithmetic:**
 >In the formulas, priority, nice and ready_threads are integers, but recent_cpu and load_avg are real numbers. Unfortunately, PintOS does not support floating-point arithmetic in the kernel, because it would complicate and slow the kernel... This means that calculations on real quantities must be simulated using integers.
 
-
-Hence, the implementation of these functions is necessary.
-
-Defined functions:
+Added functions:
 1. FP_CONST(val): Convert a value to fixed-point value
 2. FP_ADD(val1, val2): Add two fixed-point values
 3. FP_ADD_MIX(val1, int val2): Add a fixed-point value with an int value
@@ -54,13 +51,14 @@ Modifications: Line 236, 243 & 292.
 
 **_./src/threads/threads.h:_**
 This header file was modified to add new variable/function declarations needed for **thread_mlfqs** to work properly. The functions are implemented in *thread.c* file.
-The changes are listed below:
 
-*Variables: Edits in thread's structure, Adding line 116, 117*
+Modifications:
+
+*Variables: Edits in thread's structure, adding line 116, 117*
 - int nice
 - fixed_t recent_cpu
 
-*Functions: Definition of function prototypes*
+*Functions: Definition of function prototypes, adding line 182 to 185*
 - void thread_mlfqs_incr_recent_cpu (void)
 - void thread_mlfqs_calc_recent_cpu (void)
 - void thread_mlfqs_update_priority (struct thread *)
