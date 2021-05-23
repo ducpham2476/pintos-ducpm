@@ -77,4 +77,9 @@ This file was modified for the implementation of needed functions for **thread_m
 	7. Modify line 533: return load_avg value
 	8. Modify line 542: return recent_cpu value
 	9. Added line 546 to 630, implement some needed functions:
-	- 
+		- thread_mlfqs_incr_recent_cpu (void): Check current thread is idle or not. If not, increase current thread's recent_cpu by 1
+		- thread_mlfqs_calc_recent_cpu (struct thread *t): Calculate thread's recent CPU. Formula is defined in B.3 Calculating recent_cpu
+		- thread_mlfqs_update_priority (struct thread *t): Check if thread is idle or not. If not, update thread's priority. Formula is defined in B.2 Calculating priority
+		- thread_mlfqs_refresh (void): Invoked once per second to refresh load_avg and recent_cpu of all threads
+	
+*end of file*
