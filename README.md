@@ -27,7 +27,8 @@ Each changes are enclosed within the structure:
 
 *./src/threads/fixed_point.h:*
 This header file was added to define some functions on converting floating-point real number to fixed-point real number, and calculations on those numbers.
-#From B.6 Fixed-Point Real Arithmetic:#
+
+**From B.6 Fixed-Point Real Arithmetic:**
 *In the formulas, priority, nice and ready_threads are integers, but recent_cpu and load_avg are real numbers. Unfortunately, PintOS does not support floating-point arithmetic in the kernel, because it would complicate and slow the kernel... This means that calculations on real quantities must be simulated using integers* 
 Hence, the implementation of these functions is necessary.
 Defined functions:
