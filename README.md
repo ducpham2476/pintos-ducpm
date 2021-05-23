@@ -30,18 +30,18 @@ This header file was added to define some functions on converting floating-point
 **From B.6 Fixed-Point Real Arithmetic:**
 >In the formulas, priority, nice and ready_threads are integers, but recent_cpu and load_avg are real numbers. Unfortunately, PintOS does not support floating-point arithmetic in the kernel, because it would complicate and slow the kernel... This means that calculations on real quantities must be simulated using integers.
 
-Added functions:
-1. FP_CONST(val): Convert a value to fixed-point value
-2. FP_ADD(val1, val2): Add two fixed-point values
-3. FP_ADD_MIX(val1, int val2): Add a fixed-point value with an int value
-4. FP_SUB(val1, val2): Subtract two fixed-point values
-5. FP_SUB_MIX(val1, int val2): Subtract an int value from a fixed-point value
-6. FP_MUL(val1, val2): Multiply two fixed-point values
-7. FP_MUL_MIX(val1, int val2): Multiply a fixed-point value with an int value
-8. FP_DIV(val1, val2): Divide a fixed-point value from an another fixed-point value
-9. FP_DIV_MIX(val1, int val2): Divide an int value from the fixed-point value
-10. FP_INT_PART(val): Get the integer part of a fixed-point value
-11. FP_ROUND(val): Get the rounded integer value of a fixed-point value
+	Added functions:
+	1. FP_CONST(val): Convert a value to fixed-point value
+	2. FP_ADD(val1, val2): Add two fixed-point values
+	3. FP_ADD_MIX(val1, int val2): Add a fixed-point value with an int value
+	4. FP_SUB(val1, val2): Subtract two fixed-point values
+	5. FP_SUB_MIX(val1, int val2): Subtract an int value from a fixed-point value
+	6. FP_MUL(val1, val2): Multiply two fixed-point values
+	7. FP_MUL_MIX(val1, int val2): Multiply a fixed-point value with an int value
+	8. FP_DIV(val1, val2): Divide a fixed-point value from an another fixed-point value
+	9. FP_DIV_MIX(val1, int val2): Divide an int value from the fixed-point value
+	10. FP_INT_PART(val): Get the integer part of a fixed-point value
+	11. FP_ROUND(val): Get the rounded integer value of a fixed-point value
 
 **_./src/threads/synch.c:_**
 Additional changes to pre-existing functions to disable **thread_mlfqs** (Multilevel Feedback Queue) scheduling, prevent thread's priority donating interfere with mlfqs
