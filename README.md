@@ -20,7 +20,9 @@ The details on why the changes are added got explained precisely using comments 
 Each changes are enclosed within the structure:
 
 //Edit
-	*changes*
+	
+	*Additional changes*
+	
 //End of edit
 
 #Details:#
